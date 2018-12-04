@@ -1,10 +1,34 @@
-<div class="row">
-  <div class="col-12">
-    {{#get "posts" slug="home-section-2" as |post|}}
-      {{#post}}
-        {{title}}
-        {{content}}
-      {{/post}}
-    {{/get}}
+<style>
+ 
+
+</style>
+
+<!-- Section 3 -->
+<div class="row row-section solid-background">
+  <div class="col-12 col-sm-6">
+    <div class="overlay-text">
+      {{#get "posts" slug="home-section-3" as |post|}}
+        {{#post}}
+          <div class="heading-1">
+            {{title}}
+          </div>
+        {{/post}}
+      {{/get}}
+    </div>
   </div>
+  <div class="col-12 col-sm-6">
+    <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
+    
+    <div class="overlay-text">
+      {{#get "posts" slug="home-section-3" as |post|}}
+        {{#post}}
+          <div class="section-copy">
+            {{content}}
+          </div>
+        {{/post}}
+      {{/get}}
+    </div>
+
+  </div>
+
 </div>

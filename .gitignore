@@ -1,3 +1,5 @@
 /content/themes/casper/node_modules
 /content/themes/semada/node_modules
-/content/data/ghost-local.db
+/content/data
+/content/logs
+/content/images

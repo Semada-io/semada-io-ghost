@@ -1,0 +1,81 @@
+<style>
+
+
+</style>
+
+<div class="row">
+  <div class="col-12 chalkboard-container">
+    <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
+    
+    <div class="row row-section">
+      <div class="col-12">
+        <div class="overlay-text">
+          {{#get "posts" slug="home-section-4" as |post|}}
+            {{#post}}
+              <div class="heading-1 center-text">
+                {{content}}
+              </div>
+            {{/post}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 1 -->
+    <div class="row row-section">
+      <div class="col-12 col-sm-6 order-sm-12">
+        
+        <img 
+          class="overlay-image center-item" 
+          src="{{asset "images/por.gif"}}">
+        
+      </div>
+      <div class="col-12 col-sm-6 order-sm-1">
+        <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
+        
+        <div class="overlay-text">
+          {{#get "posts" slug="home-section-5" as |post|}}
+            {{#post}}
+              <div class="heading-1">
+                {{title}}
+              </div>
+              {{content}}
+            {{/post}}
+          {{/get}}
+        </div>
+
+      </div>
+
+    </div>
+    
+    <!-- Section 2 -->
+    <!-- <div class="row-section d-none d-sm-block">
+    </div> -->
+    <div class="row row-section">
+      <div class="col-12 col-sm-6">
+        currency image here
+        <!-- <img 
+          class="overlay-image center-item" 
+          src="{{asset "images/big-vision.png"}}"> -->
+        
+      </div>
+      <div class="col-12 col-sm-6">
+        <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
+        
+        <div class="overlay-text">
+          {{#get "posts" slug="home-section-6" as |post|}}
+            {{#post}}
+              <div class="heading-1">
+                {{title}}
+              </div>
+              {{content}}
+            {{/post}}
+          {{/get}}
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div>
+</div>

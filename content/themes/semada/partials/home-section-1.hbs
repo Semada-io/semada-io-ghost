@@ -6,10 +6,9 @@
    background-size: 100%
  } */
  
- .image-container {
+ .chalkboard-container {
    position: relative;
  }
- 
  .chalkboard {
    position: absolute;
    top: 0;
@@ -24,10 +23,18 @@
    left: 0;
    z-index: 2;
  }
- .full-height-image {
-   object-fit: cover;
-   height: 100vh;
-   object-position: 21%;
+ .center-container {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   height: 100%;
+ }
+ .center-item {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
  }
  .overlay-text {
    position: relative;
@@ -36,22 +43,33 @@
    z-index: 3;
    color: white;
  }
- .screen-row {
-   height: 100vh;
+ .center-text {
+   text-align: center;
+ }
+ .row-section {
+   padding-top: 70px;
+   padding-bottom: 10px;
+ }
+ .solid-background {
+   background: black;
+ }
+ .profile-photo {
+   border-radius: 50%;
  }
 
 </style>
 
-<div class="row screen-row">
-  <div class="col-12 image-container">
+<div class="row">
+  <div class="col-12 chalkboard-container">
     <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
     
-    <div class="row">
-      <div class="col-xs-12 col-sm-9 order-sm-12">
-        <img class="overlay-image full-height-image" src="{{asset "images/header.png"}}">
+    <!-- Section 1 -->
+    <div class="row row-section">
+      <div class="col-12 col-sm-9 order-sm-12">
+        <img class="overlay-image" src="{{asset "images/header.png"}}">
       </div>
-      <div class="col-xs-12 col-sm-3 order-sm-1">
-        <div class="d-none d-sm-block" style="height:45%;"></div>
+      <div class="col-12 col-sm-3 order-sm-1">
+        <div class="d-none d-sm-block" style="height:38%;"></div>
         
         <div class="overlay-text">
           {{#get "posts" slug="home-section-1" as |post|}}
@@ -68,5 +86,37 @@
 
       </div>
     </div>
+    
+    <!-- Section 2 -->
+    <!-- <div class="row-section d-none d-sm-block">
+    </div> -->
+    <div class="row row-section">
+      <div class="col-12 col-sm-6">
+        
+        <img 
+          class="overlay-image center-item" 
+          src="{{asset "images/big-vision.png"}}">
+        
+      </div>
+      <div class="col-12 col-sm-6">
+        <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
+        
+        <div class="overlay-text">
+          {{#get "posts" slug="home-section-2" as |post|}}
+            {{#post}}
+              <div class="heading-1">
+                {{title}}
+              </div>
+              <div class="section-copy">
+                {{content}}
+              </div>
+            {{/post}}
+          {{/get}}
+        </div>
+
+      </div>
+
+    </div>
+    
   </div>
 </div>
