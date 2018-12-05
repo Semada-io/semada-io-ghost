@@ -7,13 +7,16 @@
   <div class="col-12 chalkboard-container">
     <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
     
+    <a id="protocol-stack"></a>
     <div class="row row-section">
       <div class="col-12">
         <div class="overlay-text">
           {{#get "posts" slug="home-section-4" as |post|}}
             {{#post}}
-              <div class="heading-1 center-text">
-                {{content}}
+              <div class="heading-1-wrapper">
+                <div class="heading-1">
+                  {{content}}
+                </div>
               </div>
             {{/post}}
           {{/get}}
@@ -36,9 +39,10 @@
         <div class="overlay-text">
           {{#get "posts" slug="home-section-5" as |post|}}
             {{#post}}
-              <div class="heading-1">
+              <div class="heading-2">
                 {{title}}
               </div>
+              <br/>
               {{content}}
             {{/post}}
           {{/get}}
@@ -59,21 +63,23 @@
           src="{{asset "images/big-vision.png"}}"> -->
         
       </div>
-      <div class="col-12 col-sm-6">
+      <div class="col-11 col-sm-5">
         <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
         
         <div class="overlay-text">
           {{#get "posts" slug="home-section-6" as |post|}}
             {{#post}}
-              <div class="heading-1">
+              <div class="heading-2">
                 {{title}}
               </div>
+              <br/>
               {{content}}
             {{/post}}
           {{/get}}
         </div>
 
       </div>
+      <div class="col-1"></div>
 
     </div>
     

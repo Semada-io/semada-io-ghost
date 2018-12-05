@@ -3,14 +3,16 @@
 
 </style>
 
-    
+<a id="our-team"></a>
 <div class="row justify-content-sm-center row-section solid-background">
   <div class="col-12 col-md-8 col-lg-6">
     <div class="overlay-text">
       {{#get "posts" slug="home-section-7" as |post|}}
         {{#post}}
-          <div class="heading-1 center-text">
-            {{title}}
+          <div class="heading-1-wrapper">
+            <div class="heading-1">
+              {{title}}
+            </div>
           </div>
           <div class="section-copy center-text">
             {{content}}

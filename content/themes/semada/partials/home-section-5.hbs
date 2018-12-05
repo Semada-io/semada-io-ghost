@@ -8,9 +8,35 @@
     <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
     
     <div class="row row-section">
-      <div class="col-12">
+      <div class="col-12 col-sm-4">
         <div class="overlay-text">
-          text here for footer
+          {{!-- The big email subscribe modal content --}}
+          {{#if @labs.subscribers}}
+            <span class="section-sub-copy">
+              Newsletter
+            </span>
+            <br/><br/>
+            <span class="heading-3">
+              Interested in learning more?
+            </span>
+            <br/><br/>
+            {{subscribe_form 
+                placeholder="email"
+                input_class="input-field"
+                button_class="submit-button"
+            }}
+          {{/if}}
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="overlay-text">
+          MIDDLE 
+        </div>
+      </div>
+          
+      <div class="col-12 col-sm-4">
+        <div class="overlay-text">
+          RIGHT
         </div>
       </div>
     </div>
