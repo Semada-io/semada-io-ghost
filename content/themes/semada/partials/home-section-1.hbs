@@ -1,140 +1,19 @@
-<style>
- /* .background-section1 {
-   background-image: url({{asset "images/header.png"}}), url({{asset "images/chalkboard-background.png"}});
-   background-position: right bottom, left top;
-   background-repeat: no-repeat, no-repeat;
-   background-size: 100%
- } */
- 
- .chalkboard-container {
-   position: relative;
- }
- .chalkboard {
-   position: absolute;
-   top: 0;
-   left: 0;
-   z-index: 1;
-   height: 100%;
-   width: 100%;
- }
- .overlay-image {
-   position: relative;
-   top: 0;
-   left: 0;
-   z-index: 2;
- }
- .center-container {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 100%;
-   height: 100%;
- }
- .center-item {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 70%;
- }
- .overlay-text {
-   position: relative;
-   top:0;
-   left:0;
-   z-index: 3;
-   color: white;
- }
- .center-text {
-   text-align: center;
- }
- .row-section {
-   min-height: 60vh;
-   padding-top: 70px;
-   padding-bottom: 10px;
-   padding-left: 40px;
-   padding-right: 40px;
- }
- .row-footer {
-   padding-top: 70px;
-   padding-bottom: 30px;
-   padding-left: 40px;
-   padding-right: 40px;
- }
- .nav-section {
-   padding-top: 30px;
-   padding-left: 20px;
- }
- .solid-background {
-   background: black;
- }
- .profile-photo {
-   border-radius: 15%;
- }
- .input-field {
-   background-color: transparent;
-   border-top: transparent;
-   border-left: transparent;
-   border-right: transparent;
-   border-radius: 0px;
- }
- .flex-container {
-   display:flex; 
-   align-items: center; 
-   height: 100%;
- }
- .flex-align-bottom {
-   align-self: flex-end;
- }
- .navbar {
-   z-index: 1000;
- }
- .nav-link {
-   text-align: right;
-   color: white;
- }
- 
- body {
-   background: #000000;
- }
-
-</style>
-
 <div class="row">
   <div class="col-12 chalkboard-container">
     <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
     {{> "site-nav"}}
     <!-- Section 1 -->
-    <div class="row row-section">
+    <div class="row row-section-no-side-padding">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 order-sm-1 padded-col">
+        {{#get "posts" slug="home-section-1" as |post|}}
+          {{#post}}
+            {{content}}
+          {{/post}}
+        {{/get}}
+      </div>
       <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-9 order-sm-12">
         <img class="overlay-image" src="{{asset "images/header.png"}}">
         <br/>
-      </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 order-sm-1">
-        
-        
-          
-          <div class="flex-container">
-            <div class="overlay-text flex-align-bottom">
-            {{#get "posts" slug="home-section-1" as |post|}}
-              {{#post}}
-                <div class="section-copy">
-                  {{excerpt}}
-                </div>
-                <br/>
-                <div class="heading-1">
-                  {{title}}
-                </div>
-                <div class="section-copy">
-                  {{content}}
-                </div>
-                <a href="#our-vision" class="btn btn-light" role="button">
-                  Explore
-                </a>
-              {{/post}}
-            {{/get}}
-          </div>
-          </div>
-        
-
       </div>
     </div>
     
@@ -143,32 +22,20 @@
     </div> -->
     <a id="our-vision"></a>
     <div class="row row-section">
-      <div class="col-12 col-sm-6">
-        
+      <div class="col-12 col-sm-6 order-sm-12">
+          {{#get "posts" slug="home-section-2" as |post|}}
+            {{#post}}
+              {{content}}
+            {{/post}}
+          {{/get}}
+        <br/><br/>
+      </div>
+      <div class="col-12 col-sm-6 order-sm-1">
         <img 
           class="overlay-image center-item" 
           src="{{asset "images/big-vision.png"}}">
           <br/>
       </div>
-      <div class="col-11 col-sm-5">
-        <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->
-        
-        <div class="overlay-text">
-          {{#get "posts" slug="home-section-2" as |post|}}
-            {{#post}}
-              <div class="heading-1">
-                {{title}}
-              </div>
-              <div class="section-copy">
-                {{content}}
-              </div>
-            {{/post}}
-          {{/get}}
-        </div>
-
-      </div>
-      <div class="col-1"></div>
-
     </div>
     
   </div>

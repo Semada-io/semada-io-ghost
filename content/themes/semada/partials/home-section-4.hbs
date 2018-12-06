@@ -30,13 +30,15 @@
     {{#get "posts" filter="tags:[team]" as |post|}}
       {{#post}}
         <div class="col-6 col-sm-3 col-lg-2">
-          <div class="overlay-text">
-            <img class="profile-photo" src='{{feature_image}}'/>
-            <div class="profile-name center-text">
-              {{title}}
-            </div>  
-            <div class="center-text">
-              {{content}}
+          <div class="profile">
+            <div class="overlay-text">
+              <img class="profile-photo" src='{{feature_image}}'/>
+              <div class="profile-name center-text">
+                {{title}}
+              </div>  
+              <div class="center-text">
+                {{content}}
+              </div>
             </div>
           </div>
         </div>

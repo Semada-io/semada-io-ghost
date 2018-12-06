@@ -1,16 +1,20 @@
 <nav class="navbar navbar-expand-md navbar-dark" style="background-color: transparent;">
-  <a class="navbar-brand" href="#"></a>
+  <span class="navbar-brand">
+    <div class="heading-2 overlay-text">
+      {{@blog.title}}
+    </div>
+  </span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <i class="fas fa-bars hamburger"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" style="width:100%;">
       
         {{#foreach navigation}}
-          <li class="nav-item">
+          <li class="nav-item" style="flex-grow:1;">
           
-            <a class="link nav-link" href="{{url absolute="true"}}">{{label}}</a>
+            <a class="link nav-link" style="color:#ffffff;" href="{{url absolute="true"}}">{{label}}</a>
           
           </li>
         {{/foreach}}
