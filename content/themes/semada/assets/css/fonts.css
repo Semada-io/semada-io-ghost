@@ -15,14 +15,17 @@
 
 .heading-1-wrapper {
   display: block;
+}
+
+.center-text {
   text-align: center;
 }
 
 .heading-1 {
   font-family: 'NocturnoDisplayProMedium';
   display: inline-block;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 60px;
+  line-height: 60px;
 }
 .heading-1:after {
   content: '';
@@ -31,34 +34,40 @@
   margin: .5em 0 .5em;
 }
 
-.heading-2 {
-  font-family: 'Larsseit-Medium';
-  font-size: 20px;
-  line-height: 20px;
-}
-
 .heading-3 {
   font-family: 'Larsseit-Medium';
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 25px;
+  line-height: 25px;
 }
 
 .heading-4 {
   font-family: 'NocturnoDisplayProMedium';
+  font-size: 30px;
+  line-height: 20px;
+}
+
+.profile-name {
+  font-family: 'Larsseit-Medium';
   font-size: 20px;
   line-height: 20px;
+  padding-top: 15px;
+}
+
+.profile-copy {
+  font-family: 'Larsseit-Light';
+  font-size: 14px;
 }
 
 .section-copy {
   font-family: 'Larsseit-Light';
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .section-sub-copy {
   font-family: 'Larsseit-Light';
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .submit-button {
@@ -67,15 +76,25 @@
   border-radius: 3px;
   color: #000000;
 }
+.social-icon {
+  font-size: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
 
 a {
   font-family: 'Larsseit-Medium';
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
 }
 
-a:hover {
+a.link:hover {
   font-family: 'Larsseit-Medium';
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
 }
+
+/* ul {
+  list-style: none;
+  padding-left: 0;
+} */

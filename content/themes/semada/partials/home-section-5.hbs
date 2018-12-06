@@ -7,7 +7,7 @@
   <div class="col-12 chalkboard-container">
     <img class="chalkboard" src="{{asset "images/chalkboard-background.png"}}">
     
-    <div class="row row-section">
+    <div class="row row-footer">
       <div class="col-12 col-sm-4">
         <div class="overlay-text">
           {{!-- The big email subscribe modal content --}}
@@ -26,20 +26,18 @@
                 button_class="submit-button"
             }}
           {{/if}}
+          <br/>
         </div>
       </div>
-      <div class="col-12 col-sm-4">
+      <div class="col-12 col-sm-8">
         <div class="overlay-text">
-          MIDDLE 
+          {{#get "posts" slug="home-footer" as |post|}}
+            {{#post}}
+              {{content}}
+            {{/post}}
+          {{/get}}
         </div>
       </div>
-          
-      <div class="col-12 col-sm-4">
-        <div class="overlay-text">
-          RIGHT
-        </div>
-      </div>
-    </div>
-    
+    </div>    
   </div>
 </div>

@@ -47,13 +47,20 @@
    text-align: center;
  }
  .row-section {
+   min-height: 60vh;
    padding-top: 70px;
    padding-bottom: 10px;
    padding-left: 40px;
+   padding-right: 40px;
+ }
+ .row-footer {
+   padding-top: 70px;
+   padding-bottom: 30px;
+   padding-left: 40px;
+   padding-right: 40px;
  }
  .nav-section {
    padding-top: 30px;
-   padding-bottom: 15px;
    padding-left: 20px;
  }
  .solid-background {
@@ -69,17 +76,25 @@
    border-right: transparent;
    border-radius: 0px;
  }
- hr {
-   position: relative;
-   display: block;
-   width: 100%;
-   padding: 0;
-   height: 1px;
-   border: 0;
-   border-top: 1px solid #e3e9ed;
-   margin: .5em 0 .5em;
+ .flex-container {
+   display:flex; 
+   align-items: center; 
+   height: 100%;
  }
-
+ .flex-align-bottom {
+   align-self: flex-end;
+ }
+ .navbar {
+   z-index: 1000;
+ }
+ .nav-link {
+   text-align: right;
+   color: white;
+ }
+ 
+ body {
+   background: #000000;
+ }
 
 </style>
 
@@ -89,24 +104,36 @@
     {{> "site-nav"}}
     <!-- Section 1 -->
     <div class="row row-section">
-      <div class="col-12 col-sm-9 order-sm-12">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-9 order-sm-12">
         <img class="overlay-image" src="{{asset "images/header.png"}}">
+        <br/>
       </div>
-      <div class="col-12 col-sm-3 order-sm-1">
-        <div class="d-none d-sm-block" style="height:38%;"></div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 order-sm-1">
         
-        <div class="overlay-text">
-          {{#get "posts" slug="home-section-1" as |post|}}
-            {{#post}}
-              <div class="heading-1">
-                {{title}}
-              </div>
-              <div class="section-copy">
-                {{content}}
-              </div>
-            {{/post}}
-          {{/get}}
-        </div>
+        
+          
+          <div class="flex-container">
+            <div class="overlay-text flex-align-bottom">
+            {{#get "posts" slug="home-section-1" as |post|}}
+              {{#post}}
+                <div class="section-copy">
+                  {{excerpt}}
+                </div>
+                <br/>
+                <div class="heading-1">
+                  {{title}}
+                </div>
+                <div class="section-copy">
+                  {{content}}
+                </div>
+                <a href="#our-vision" class="btn btn-light" role="button">
+                  Explore
+                </a>
+              {{/post}}
+            {{/get}}
+          </div>
+          </div>
+        
 
       </div>
     </div>
@@ -121,7 +148,7 @@
         <img 
           class="overlay-image center-item" 
           src="{{asset "images/big-vision.png"}}">
-        
+          <br/>
       </div>
       <div class="col-11 col-sm-5">
         <!-- <div class="d-none d-sm-block" style="height:45%;"></div> -->

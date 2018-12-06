@@ -1,12 +1,13 @@
 <div class="row nav-section">
-  <div class="col-4">
+  <div class="col-sm-6 col-md-4">
     <div class="heading-4 overlay-text">
       {{@blog.title}}
     </div>
   </div>
   
-  {{#if @blog.navigation}}
-      {{navigation}}
-  {{/if}}
-  
+  <div class="col-sm-6 col-md-8">
+    {{#if @blog.navigation}}
+        {{navigation}}
+    {{/if}}
+  </div>
 </div>
