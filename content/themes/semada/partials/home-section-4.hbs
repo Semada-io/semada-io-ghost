@@ -27,7 +27,7 @@
 
     <!-- Section 1 -->
     <div class="row solid-background">
-    {{#get "posts" filter="tags:[team]" as |post|}}
+    {{#get "posts" filter="tags:[team]" order="custom_excerpt asc" as |post|}}
       {{#post}}
         <div class="col-6 col-sm-3 col-lg-2">
           <div class="profile">

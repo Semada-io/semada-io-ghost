@@ -200,7 +200,11 @@ ul {
   padding-bottom: 20px;
 }
 .profile-photo {
-  border-radius: 15%;
+  border-radius: 50%;
+  transition: transform .2s;
+}
+.profile-photo:hover {
+  transform: scale(1.1);
 }
 .input-field {
   background-color: transparent;
