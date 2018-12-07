@@ -93,6 +93,16 @@
         } // End if
       });
       
+      $(".navbar-toggler").click(function(){
+        if(!$("#navbarText").is(':visible')) {
+          nav.addClass('sticky');
+        } else {
+          if($(".nav-section").offset().top === 0) {
+            nav.removeClass('sticky');
+          }
+        }
+      })
+      
       // When the user scrolls the page, execute myFunction 
       window.onscroll = function() {myFunction()};
 

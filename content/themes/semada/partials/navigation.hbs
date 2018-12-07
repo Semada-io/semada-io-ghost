@@ -4,7 +4,14 @@
       <a href="#home" class="heading-2">{{@blog.title}}</a>
     </div>
   </span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-toggle="collapse" 
+    data-target="#navbarText" 
+    aria-controls="navbarText" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation">
     <i class="fas fa-bars hamburger"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -14,7 +21,17 @@
         {{#foreach navigation}}
           <li class="nav-item" style="flex-grow:1;">
           
-            <a class="link nav-link" style="color:#ffffff;" href="{{url absolute="true"}}">{{label}}</a>
+            <a 
+              class="link nav-link" 
+              style="color:#ffffff;" 
+              href="{{url absolute="true"}}"
+              aria-controls="navbarText"
+              data-toggle="collapse"
+              data-target="#navbarText" 
+              role="button">
+              {{label}}
+              
+            </a>
           
           </li>
         {{/foreach}}
