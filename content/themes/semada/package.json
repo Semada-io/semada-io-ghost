@@ -2,7 +2,7 @@
     "name": "semada",
     "description": "Custom Semada landing page theme",
     "demo": "https://demo.ghost.io",
-    "version": "2.7.0",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=2.0.0"
     },
