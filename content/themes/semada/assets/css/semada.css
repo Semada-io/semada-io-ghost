@@ -54,16 +54,14 @@
   font-family: 'NocturnoDisplayProMedium', serif;
   font-size: 30px;
   line-height: 20px;
-  font-size: 2.5vmax;
-  line-height: 2vmax;
+  font-size: 3.5vmax;
 }
 
 a.heading-2:hover {
   font-family: 'NocturnoDisplayProMedium', serif;
   font-size: 30px;
   line-height: 20px;
-  font-size: 2.5vmax;
-  line-height: 2vmax;
+  font-size: 3.5vmax;
   color: #ffffff;
 }
 
@@ -75,8 +73,8 @@ a.heading-2:hover {
 
 .profile-name {
   font-family: 'Larsseit-Medium', sans-serif;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   padding-top: 15px;
 }
 
@@ -220,6 +218,9 @@ ul {
 }
 .flex-align-bottom {
   align-self: flex-end;
+}
+.flex-align-center {
+  align-self: center;
 }
 .navbar {
   z-index: 1000;
