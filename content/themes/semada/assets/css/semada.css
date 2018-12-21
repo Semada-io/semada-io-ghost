@@ -249,6 +249,14 @@ ul {
   padding-top: 60px;
 }
 
+.video-width {
+  width: 100%;
+}
+
+.video-border {
+  border: 5px solid #818181;
+}
+
 
 body {
   background: #000000;
