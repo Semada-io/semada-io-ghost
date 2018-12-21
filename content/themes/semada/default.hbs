@@ -57,6 +57,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="{{asset "built/jquery.visible.js"}}"></script>
     
     <script 
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
@@ -114,6 +115,14 @@
           nav.addClass('sticky');
         } else {
           nav.removeClass('sticky');
+        }
+        
+        if($(".video").visible()){
+          if($(".video")[0].paused){
+            setTimeout(function() {
+              $(".video")[0].play()
+            }, 2000)
+          }
         }
       }
 
