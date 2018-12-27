@@ -2,10 +2,10 @@
   <div class="col-12 chalkboard-container">
     <img class="chalkboard" src="{{asset "images/chalkboard-background.jpg"}}">
     <a id="protocol-stack"></a>
-    <div class="row-section">
+    <div class="row-section-no-padding">
       
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 padded-col">
           <div class="overlay-text">
             {{#get "posts" slug="home-section-4" as |post|}}
               {{#post}}
@@ -23,7 +23,7 @@
       <!-- Section 1 -->
       <div class="row">
 
-        <div class="col-12 col-sm-6 order-sm-1">
+        <div class="col-12 col-sm-6 order-sm-1 padded-col">
           
           <div class="overlay-text">
             {{#get "posts" slug="home-section-5" as |post|}}
@@ -36,7 +36,7 @@
               {{/post}}
             {{/get}}
           </div>
-
+          <br/>
         </div>
         
         <div class="col-12 col-sm-6 order-sm-12" id="pordiv">
@@ -62,7 +62,7 @@
       <!-- Section 2 -->
 
       <div class="row">
-        <div class="col-12 col-sm-6 order-sm-12">
+        <div class="col-12 col-sm-6 order-sm-12 padded-col">
           
           <div class="overlay-text">
             {{#get "posts" slug="home-section-6" as |post|}}
@@ -75,13 +75,13 @@
               {{/post}}
             {{/get}}
           </div>
-
+          <br/>
         </div>
         
         <div class="col-12 col-sm-6 order-sm-1">
           <video 
             id="stablecoinmovie"
-            class="overlay-image center-item video" 
+            class="overlay-image center-item video video-width" 
             height="100%"
             controls
             playsinline
